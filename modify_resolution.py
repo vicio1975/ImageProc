@@ -17,10 +17,10 @@ def main():
             foo = Image.open(filename)
             size = (os.stat(filename).st_size)/1000
             file = filename[:-3] + "_out.jpg"
-            print("Processing ",filename," . . .\n")
-            while size > 350:
+            print("Processing ",filename)
+            while size > 400:
                 print("...")
-                foo.save(file,optimize=False,quality=50)
+                foo.save(file,optimize=False,quality=55)
                 size = (os.stat(file).st_size)/1000
    
                 
